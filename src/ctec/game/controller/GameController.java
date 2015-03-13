@@ -29,9 +29,12 @@ public class GameController
 //	}
 	public int computersChoice()
 	{
-		int choice = (int)(Math.random()*3);
+		int choice = (int)(Math.random()*3+1);
 		if (choice == 0)
 			this.computersChoice();
+			
+			
 		return choice;
+		
 	}
 }

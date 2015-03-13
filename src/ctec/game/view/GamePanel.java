@@ -83,7 +83,7 @@ public class GamePanel extends JPanel
 				}
 				else if(baseController.computersChoice()==0)
 				{
-					displayPane.setText("Try Again");
+					displayPane.setText("Try Again.");
 				}
 				
 						
@@ -117,7 +117,7 @@ public class GamePanel extends JPanel
 				}
 				else if(baseController.computersChoice()==0)
 				{
-					displayPane.setText("Try Again");
+					displayPane.setText("Try Again.");
 				}
 				
 			}
@@ -153,7 +153,7 @@ public class GamePanel extends JPanel
 				}
 				else if(baseController.computersChoice()==0)
 				{
-					displayPane.setText("Try Again");
+					displayPane.setText("Try Again.");
 				}
 				
 			}
