@@ -37,36 +37,18 @@ public class GamePanel extends JPanel
 		paperButton = new JButton();
 		paperButton.setText("Paper");
 		scissorsButton = new JButton();
-	
-	
 		scissorsButton.setText("Scissors");
 		displayPane = new JTextPane();
-	
 		winScoreLabel = new Label();
-		baseLayout.putConstraint(SpringLayout.WEST, winScoreLabel, 226, SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.EAST, winScoreLabel, -725, SpringLayout.EAST, this);
 		winScoreLabel.setText("Wins: ");
 		loseScoreLabel = new Label();
-		baseLayout.putConstraint(SpringLayout.EAST, loseScoreLabel, -715, SpringLayout.EAST, this);
 		loseScoreLabel.setText("Losses: ");
 		tieScoreLabel = new Label();
-		baseLayout.putConstraint(SpringLayout.WEST, tieScoreLabel, 0, SpringLayout.WEST, winScoreLabel);
 		tieScoreLabel.setText("Ties: ");
 		winsScores = new Label();
-		baseLayout.putConstraint(SpringLayout.NORTH, loseScoreLabel, 6, SpringLayout.SOUTH, winsScores);
-		baseLayout.putConstraint(SpringLayout.WEST, winsScores, 6, SpringLayout.EAST, winScoreLabel);
-		baseLayout.putConstraint(SpringLayout.NORTH, winScoreLabel, 0, SpringLayout.NORTH, winsScores);
-		baseLayout.putConstraint(SpringLayout.NORTH, winsScores, 10, SpringLayout.NORTH, this);
-	
 		losesScores = new Label();
-		baseLayout.putConstraint(SpringLayout.NORTH, losesScores, 6, SpringLayout.SOUTH, winsScores);
-		baseLayout.putConstraint(SpringLayout.WEST, losesScores, 281, SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.EAST, losesScores, -695, SpringLayout.EAST, this);
-		
 		tiesScores = new Label();
-		baseLayout.putConstraint(SpringLayout.SOUTH, tieScoreLabel, 0, SpringLayout.SOUTH, tiesScores);
-		baseLayout.putConstraint(SpringLayout.NORTH, tiesScores, 18, SpringLayout.SOUTH, losesScores);
-		baseLayout.putConstraint(SpringLayout.WEST, tiesScores, 0, SpringLayout.WEST, losesScores);
+	
 		
 		
 		
@@ -182,6 +164,8 @@ public class GamePanel extends JPanel
 	private void setupLayout()
 	{
 		baseLayout.putConstraint(SpringLayout.WEST, rockButton, 98, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.EAST, loseScoreLabel, -715, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, tieScoreLabel, 0, SpringLayout.WEST, winScoreLabel);
 		baseLayout.putConstraint(SpringLayout.EAST, scissorsButton, 0, SpringLayout.EAST, displayPane);
 		baseLayout.putConstraint(SpringLayout.NORTH, displayPane, 292, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, displayPane, -382, SpringLayout.SOUTH, this);
@@ -192,6 +176,18 @@ public class GamePanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.EAST, displayPane, -250, SpringLayout.EAST, this);
 		baseLayout.putConstraint(SpringLayout.NORTH, scissorsButton, 0, SpringLayout.NORTH, rockButton);
 		baseLayout.putConstraint(SpringLayout.WEST, scissorsButton, 661, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, winScoreLabel, 226, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.EAST, winScoreLabel, -725, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, tieScoreLabel, 0, SpringLayout.SOUTH, tiesScores);
+		baseLayout.putConstraint(SpringLayout.NORTH, tiesScores, 18, SpringLayout.SOUTH, losesScores);
+		baseLayout.putConstraint(SpringLayout.WEST, tiesScores, 0, SpringLayout.WEST, losesScores);
+		baseLayout.putConstraint(SpringLayout.NORTH, losesScores, 6, SpringLayout.SOUTH, winsScores);
+		baseLayout.putConstraint(SpringLayout.WEST, losesScores, 281, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.EAST, losesScores, -695, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, loseScoreLabel, 6, SpringLayout.SOUTH, winsScores);
+		baseLayout.putConstraint(SpringLayout.WEST, winsScores, 6, SpringLayout.EAST, winScoreLabel);
+		baseLayout.putConstraint(SpringLayout.NORTH, winScoreLabel, 0, SpringLayout.NORTH, winsScores);
+		baseLayout.putConstraint(SpringLayout.NORTH, winsScores, 10, SpringLayout.NORTH, this);
 	}
 	private void setupPanel()
 	{
