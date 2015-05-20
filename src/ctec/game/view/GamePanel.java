@@ -210,19 +210,19 @@ public class GamePanel extends JPanel
 	private String winScore()
 	{
 		String oldScore = winsScores.getText();
-		String newScore = oldScore+1;
+		String newScore = oldScore+=1;
 		return newScore;
 	}
 	private String loseScore()
 	{
 		String oldScore = losesScores.getText();
-		String newScore = oldScore+1;
+		String newScore = oldScore+=1;
 		return newScore;
 	}
 	private String tiesScore()
 	{
 		String oldScore = tiesScores.getText();
-		String newScore = oldScore+1;
+		String newScore = oldScore+=1;
 		return newScore;
 	}
 	

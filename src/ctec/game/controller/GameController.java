@@ -13,20 +13,9 @@ public class GameController
 	}
 	public void start()
 	{
-//		computersChoice();
+
 	}
-//	public int getRock()
-//	{
-//		return 1;
-//	}
-//	public int getPaper()
-//	{
-//		return 2;
-//	}
-//	public int getScissors()
-//	{
-//		return 3;
-//	}
+
 	public int computersChoice()
 	{
 		int choice = (int)(Math.random()*3+1);
